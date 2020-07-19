@@ -1,0 +1,31 @@
+.body{
+    height: 100vh;
+    width: 100vw;
+    background-image: url("../resource/IMG_1329.jpg");
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+}
+
+.cover{
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.521);
+}
+
+.vertical-bar{
+    position: absolute;
+    top: 0vh;
+    left: 10vh;
+    width: 2px;
+    height: 100vh;
+    background: #ffffff48;
+}
+
+.holizontal-bar{
+    position: absolute;
+    bottom: 10vh;
+    left: 0vh;
+    width: 100vw;
+    height: 2px;
+    background: #ffffff48;
+}
