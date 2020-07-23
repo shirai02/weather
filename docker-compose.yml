@@ -7,7 +7,7 @@ services:
     volumes:
       - ./:/usr/src/app
     working_dir: /usr/src/app
-    command: sh -c "cd react-sample && yarn start"
+    command: sh -c "cd react-sample && yarn start && yarn install"
     ports:
       - "3000:3000"
     stdin_open: true
