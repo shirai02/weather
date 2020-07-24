@@ -1,3 +1,6 @@
+$border-size: 4px;
+$border-color: black;
+
 .body{
     height: 100vh;
     width: 100vw;
@@ -17,7 +20,7 @@
         height: 80vh;
         width: 60vh;
         padding: 2vh;
-        background-color: rgba(0, 0, 0, 0.856);
+        background-color: rgba(255, 255, 255, 0.171);
         text-align: center;
         transition: all 2s ease-in-out;
 
@@ -27,18 +30,93 @@
             font-weight: 100;
             font-size: x-large;
         }
+
+        .bdT{
+            position: absolute;
+            width: 0%;
+            height: $border-size;
+            top: 0;
+            left: 0;
+            background-color: $border-color;
+            animation: bdW 2s 0s infinite alternate;
+        }
+
+        .bdB{
+            position: absolute;
+            width: 0%;
+            height: $border-size;
+            bottom: 0;
+            right: 0;
+            background-color: $border-color;
+            animation: bdW 2s 0s infinite alternate;
+        }
+
+        .bdR{
+            position: absolute;
+            height: 0%;
+            width: $border-size;
+            top: 0;
+            right: 0;
+            background-color: $border-color;
+            animation: bdH 2s 0s infinite alternate;
+        }
+
+        .bdL{
+            position: absolute;
+            height: 0%;
+            width: $border-size;
+            bottom: 0;
+            left: 0;
+            background-color: $border-color;
+            animation: bdH 2s 0s infinite alternate;
+        }
+
+        @keyframes bdW {
+            0% {
+                width: 0%;
+            }
+            25% {
+                width: 0%;
+            }
+            75% {
+                width: 100%;
+            }
+            100% {
+                width: 100%;
+            }
+        }
+
+        @keyframes bdH {
+            0% {
+                height: 0%;
+            }
+            25% {
+                height: 0%;
+            }
+            75% {
+                height: 100%;
+            }
+            100% {
+                height: 100%;
+            }
+        }
     }
 
     .cover:hover{
-        background-color: rgba(255, 255, 255, 0.171);
-        transform: rotate(360deg);
+        background-color: rgba(0, 0, 0, 0.856);
+        // transform: rotate(360deg);
+    }
+
+    .cover::after{
+        content: "after";
+        color: white;
     }
     
     .left-vertical-bar{
         position: absolute;
         top: 0vh;
         left: 10vw;
-        width: 2px;
+        width: $border-size;
         height: 100vh;
         background: #ffffff48;
     }
@@ -47,7 +125,7 @@
         position: absolute;
         top: 0vh;
         right: 10vw;
-        width: 2px;
+        width: $border-size;
         height: 100vh;
         background: #ffffff48;
     }
@@ -57,7 +135,7 @@
         top: 10vh;
         left: 0vh;
         width: 100vw;
-        height: 2px;
+        height: $border-size;
         background: #ffffff48;
     }
     
@@ -66,7 +144,7 @@
         bottom: 10vh;
         left: 0vh;
         width: 100vw;
-        height: 2px;
+        height: $border-size;
         background: #ffffff48;
     }
 }
