@@ -4,18 +4,22 @@
     background-image: url("../resource/IMG_1329.jpg");
     background-size: cover;
     background-repeat: no-repeat;
+    // text-align: center;
     
     .cover{
         position: absolute;
-        top: 9vw;
-        left: 19vw;
-        height: 80vw;
-        width: 60vw;
-        padding: 2vw;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        margin: auto;
+        display: inline-block;
+        height: 80vh;
+        width: 60vh;
+        padding: 2vh;
         background-color: rgba(0, 0, 0, 0.856);
         text-align: center;
         transition: all 2s ease-in-out;
-        // transform: translate(-50%,-50%);
 
         h1{
             color: white;
